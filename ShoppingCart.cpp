@@ -1,6 +1,15 @@
 #include "ShoppingCart.h"
 //all the setters
 
+
+void ShoppingCart::ShoppingCart(){};
+
+void void ShoppingCart::ShoppingCart(string name, string date){
+  customerName = name;
+  currentDate = date; 
+}
+
+
 //setters
 
 void ShoppingCart::AddItem(ItemToPurchase item) {
