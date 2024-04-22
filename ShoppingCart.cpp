@@ -9,17 +9,22 @@
     return currentDate;
       }
       
-      
-      
-      int GetNumItemsInCart();
-      double GetCostOfCart();
-      
-     
-   
-   private:
-      string customerName;
-      string currentDate;
-      vector<ItemToPurchase> cartItems;
-};
+      int ShoppingCart::GetNumItemsInCart(){
+          int num = 0;
+            for(int i = 0; i < cartItems.size(); i++){
+                  num += cartItem[i].GetQuantity();
+                        }
+            return num;
+      }
+                  
 
-#endif here */
+                  
+      double ShoppingCart::GetCostOfCart(){
+             double num = 0;
+            for(int i = 0; i < cartItems.size(); i++){
+                  num += cartItem[i].GetCost();
+                        }
+            return num;      
+      }
+
+
