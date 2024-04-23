@@ -51,6 +51,7 @@ void ShoppingCart::ModifyItem(ItemToPurchase item) {
         cout << "Item not found in cart. Nothing modified." << endl;
     }
 
+  //getters
 string ShoppingCart::GetCustomerName() const{
         return customerName;
       }
