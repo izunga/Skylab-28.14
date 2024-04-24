@@ -19,22 +19,41 @@ itemQuantity = quantity;
 }
 
       
-      void SetName(string name){
+void ItemToPurchase::SetName(string name){
 itemName = name;
       }
-      void SetDescription(string description){
+
+void ItemToPurchase::SetDescription(string description){
 itemDescription = description;
       }
-      void SetPrice(int price){
+
+void ItemToPurchase::SetPrice(int price){
 itemPrice = price;
       }
-      void SetQuantity(int quantity){
+
+void ItemToPurchase::SetQuantity(int quantity){
             itemQuantity = quantity;
       }
 
- void PrintItemCost(){
+string ItemToPurchase::GetName(){
+      return itemName;
+}
+
+string ItemToPurchase::GetDescription(){
+      return itemDescription;
+}
+
+int ItemToPurchase::GetPrice(){
+      return itemPrice;
+}
+
+int ItemToPurchase::GetQuantity(){
+      return itemQuantity;
+}
+
+void ItemToPurchase::PrintItemCost(){
 cout  << itemName << " " << itemQuantity << " @ $" << itemprice << " =  $" << itemprice * itemQuantity << endl;
  }
-      void PrintItemDescription(){
+void ItemToPurchase::PrintItemDescription(){
             cout << itemName << ": " << itemDescription << endl;
       }
