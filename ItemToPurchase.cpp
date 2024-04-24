@@ -4,9 +4,14 @@ using namespace std;
 
 #include "ItemToPurchase.h"
 
-ItemToPurchase();
-      ItemToPurchase(string name, string description, 
-                  int price, int quantity = 0);
+ItemToPurchase(){
+price = 0;
+quantity = 0;
+}
+      
+ItemToPurchase(string name, string description, 
+                  int price, int quantity = 0){
+
       
       void SetName(string name);
       void SetDescription(string description);
