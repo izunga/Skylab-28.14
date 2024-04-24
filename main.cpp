@@ -1,6 +1,8 @@
 
 //git repository link
+
 //team members
+//Jaden Kierulff, Inzwhi Zunga, Chris Deamon
 
 #include <iostream>
 #include <iomanip>
