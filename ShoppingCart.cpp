@@ -1,10 +1,12 @@
 #include "ShoppingCart.h"
+#include <iostream>
+#include <iomanip>
 //all the setters
 
 
-void ShoppingCart::ShoppingCart(){};
+ShoppingCart::ShoppingCart(){};
 
-void void ShoppingCart::ShoppingCart(string name, string date){
+ShoppingCart::ShoppingCart(string name, string date){
   customerName = name;
   currentDate = date; 
 }
@@ -18,7 +20,7 @@ void ShoppingCart::AddItem(ItemToPurchase item) {
 
 void ShoppingCart::RemoveItem(string name) {
   bool found = false;
-  for (unsigned int i = 0; I <carItems.size(); i++) {
+  for (unsigned int i = 0; i <cartItems.size(); i++) {
     if (cartItems[i].GetName() == name) {
       cartItems.erase(cartItems.begin() + i);
       found = true;
@@ -61,7 +63,7 @@ string ShoppingCart::GetCustomerName() const{
       
       int ShoppingCart::GetNumItemsInCart(){
           int num = 0;
-            for(int i = 0; i < cartItems.size(); i++){
+            for(unsigned int i = 0; i < cartItems.size(); i++){
                   num += cartItem[i].GetQuantity();
                         }
             return num;
@@ -72,7 +74,7 @@ string ShoppingCart::GetCustomerName() const{
       double ShoppingCart::GetCostOfCart(){
              double num = 0;
             for(int i = 0; i < cartItems.size(); i++){
-                  num += cartItem[i].GetCost();
+                  num += cartItems[i].GetCost();
                         }
             return num;      
       }
