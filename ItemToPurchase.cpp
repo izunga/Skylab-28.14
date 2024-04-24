@@ -32,3 +32,9 @@ itemPrice = price;
             itemQuantity = quantity;
       }
 
+ void PrintItemCost(){
+cout  << itemName << " " << itemQuantity << " @ $" << itemprice << " =  $" << itemprice * itemQuantity << endl;
+ }
+      void PrintItemDescription(){
+            cout << itemName << ": " << itemDescription << endl;
+      }
