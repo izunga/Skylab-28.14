@@ -76,3 +76,31 @@ string ShoppingCart::GetCustomerName() const{
                         }
             return num;      
       }
+
+void PrintTotal(){
+        if(GetNumItemsInCart()>1){
+          cout << "SHOPPING CART IS EMPTY";
+        }
+        else{
+          cout << GetName() << "'s Shopping Cart - " << GetDate() << endl;
+          cout << "Number of Items: " << GetNumItemsInCart() << endl;
+          cout << endl;
+          int total = 0;
+            for(int i = 0; i < cartItems.size(); i++){
+                  cartItems[i].PrintItemCost();
+                  total = total + (cartItems[i].GetPrice()*cartItems[i].GetQuantity);
+                  
+        }
+          
+          cout  << endl;
+          cout << "Total: $" << total;
+      }
+
+      void PrintDescriptions(){
+        cout << GetName() << "'s Shopping Cart - " << GetDate() << endl;
+        cout << endl;
+        cout << "Item Descriptions" << endl;
+        for(int i = 0; i < cartItems.size(); i++){
+                  cout << cartItems.PrintItemDescription();
+        }
+      }
