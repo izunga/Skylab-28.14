@@ -79,7 +79,7 @@ string ShoppingCart::GetCustomerName() const{
             return num;      
       }
 
-void PrintTotal(){
+void ShoppingCart::PrintTotal(){
         if(GetNumItemsInCart()>1){
           cout << "SHOPPING CART IS EMPTY";
         }
@@ -98,7 +98,7 @@ void PrintTotal(){
           cout << "Total: $" << total;
       }
 
-      void PrintDescriptions(){
+      void ShoppingCart::PrintDescriptions(){
         cout << GetName() << "'s Shopping Cart - " << GetDate() << endl;
         cout << endl;
         cout << "Item Descriptions" << endl;
