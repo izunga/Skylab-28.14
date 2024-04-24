@@ -97,7 +97,7 @@ void ShoppingCart::PrintTotal(){
           cout  << endl;
           cout << "Total: $" << total;
       }
-
+}
       void ShoppingCart::PrintDescriptions(){
         cout << GetName() << "'s Shopping Cart - " << GetDate() << endl;
         cout << endl;
