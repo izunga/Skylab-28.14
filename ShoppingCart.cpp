@@ -39,9 +39,10 @@ void ShoppingCart::ModifyItem(ItemToPurchase item) {
             if (item.GetPrice() != 0) {
                 cartItems[i].SetPrice(item.GetPrice());
             }
-            if (item.GetQuantity() != 0) {
+            //if (item.GetQuantity() != 0) {
+               //item.SetQuantity(newQuantity);
                 cartItems[i].SetQuantity(newQuantity);
-            }
+            //}
             found = true;
             break;
         }
@@ -90,7 +91,7 @@ void ShoppingCart::PrintTotal() {
         }
         cout << endl;
         cout << "Total: $" << totalCost << endl;
-        cout << endl;
+        
     
 }
 
