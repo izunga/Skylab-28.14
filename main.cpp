@@ -49,8 +49,8 @@ void ExecuteMenu(char option, ShoppingCart& theCart) {
               
                 ItemToPurchase newItem(itemName, itemDescription, itemPrice, itemQuantity);
                 theCart.AddItem(newItem);
-                cout << endl;
-                PrintMenu();
+                //cout << endl;
+                //PrintMenu();
                 
                 
             }
@@ -64,8 +64,8 @@ void ExecuteMenu(char option, ShoppingCart& theCart) {
                 getline(cin, itemName);
                 cout << endl;
                 theCart.RemoveItem(itemName);
-                cout << endl;
-                PrintMenu();
+                //cout << endl;
+                //PrintMenu();
                 
             }
             break;
@@ -86,22 +86,23 @@ void ExecuteMenu(char option, ShoppingCart& theCart) {
                 //modItem.SetQuanitity(itemQuantity);
                 cout << endl;
                 theCart.ModifyItem(modItem);
-                cout << endl;
-                PrintMenu();
+                //cout << endl;
+                //PrintMenu();
                 
             }
             break;
         case 'i':
             cout << "OUTPUT ITEMS' DESCRIPTIONS" << endl;
             theCart.PrintDescriptions();
-            cout << endl;
-            PrintMenu();
+            //cout << endl;
+            //PrintMenu();
             break;
         case 'o':
             cout << "OUTPUT SHOPPING CART" << endl;
             cout << theCart.GetCustomerName() << "'s Shopping Cart - " << theCart.GetDate() << endl;
             theCart.PrintTotal();
-            PrintMenu();
+            //cout << endl;
+            //PrintMenu();
             
             break;
         case 'q':
@@ -141,10 +142,25 @@ int main() {
    if(option=='a'||option=='d'||option=='c'||option=='i'||option=='o'||option=='q'){
       valid = true;
    }
+   else{
+      valid = false;
+   }
 
    while(option!='q'){
+      
       ExecuteMenu(option, myCart);
       
+      if(option=='a'||option=='d'||option=='c'||option=='i'||option=='o'||option=='q'){
+      valid = true;
+      }
+      else{
+      valid = false;
+      }
+       
+      if(valid){
+      cout << endl;
+      PrintMenu();
+   }
       cout << "Choose an option:"<<endl;
       cin >> option;
       
